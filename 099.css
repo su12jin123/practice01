@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.mobile {
+    display: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* header */
+header {
+    height: 100px;
+}
+
+header .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+header .inner .pc .gnb .depth01 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+/* 
+header .inner .pc .gnb .depth01:hover .depth02
+{ display: block;}
+ */
+
+header .inner .pc .gnb .depth01 > a {
+    padding: 0 30px;
+    line-height: 100px;
+    display: block;
+}
+header .inner .pc .gnb .depth02 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    display: none;
+}
+header .inner .pc .gnb .depth02 li{
+    padding: 10px 0;
+}
+
+.main_visual{
+    height: 100vh;
+}
+.main_visual img{
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+    .mobile_gnb{
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        right: -1000px;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        padding: 100px 50px;
+        text-align: center;
+        transition:1s;
+    }
+
+    .menu_open
+{
+    cursor: pointer;
+}
+    .mobile_gnb .menu_close{ 
+        width: 60px;
+        height: 40px;
+        margin: 0 auto 30px;
+        background-color: rgb(233, 158, 72);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+    }
+
+    .mobile_gnb .depth01{
+        margin-bottom: 30px;
+        
+    }
+    
+    
+    .mobile_gnb .depth01 > a {
+        background-color: rgb(44, 97, 56);
+        font-size: 20px;
+        height: 40px;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        border: 1px solid #333;
+        color: white;
+    }
+    .mobile_gnb .depth01 .depth02 li{
+        padding: 5px 0;
+        background-color: aliceblue;
+        border: 1px solid #333;
+        border-bottom: none;
+
+    }
+    .mobile_gnb .depth01 .depth02 li:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(151, 199, 107);
+        
+    }
+
+    .mobile_gnb .depth01 .depth02 li:nth-child(4){
+        border-bottom: 1px solid #333;
+    }
+
+    .mobile_gnb .depth01 .depth02{
+        display: none;
+    }
+}
+
+

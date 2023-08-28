@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 헤더</title>
+    <link rel="stylesheet" href="css/099.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.pc .depth01 > a').mouseenter(function () {
+                $('.pc .depth02').slideUp()
+                $(this).next().stop().slideDown()
+            })
+            $('.pc .gnb').mouseleave(function () {
+                $('.pc .depth02').slideUp()
+            })
+
+
+            $('.mobile_gnb .depth01 > a').click(function () {
+                if ($(this).next().css('display') == 'none') {
+                    $('.mobile .depth02').slideUp()
+                    $(this).siblings().slideDown()
+                } else {
+                    $(this).siblings().slideUp()
+                }
+            })
+
+            //메뉴닫기
+           /*  $('.mobile_close').click(function () {
+                $('.mobile_gnb').animate({
+                    'right': '-100%'
+                })
+            })
+            //메뉴보기
+            $('.menu_open').click(function () {
+                $('.mobile_gnb').animate({
+                    'right': '0'
+                })
+            }) */
+            
+                       $('.menu_close').click(function(){
+                        $('.mobile_gnb').css({'right':'-1000px'
+            
+                        })
+                       })
+                       $('.menu_open').click(function(){
+                        $('.mobile_gnb').css({
+                            'right':'0'})
+                    }) 
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="#">logo</a></h1>
+            <nav class="pc">
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#">menu1</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu2</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu3</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu4</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                </ul><!-- gnb end -->
+            </nav><!-- pc end -->
+
+            <div class="mobile menu_open">
+                <p>menu</p>
+            </div><!-- mobile menu_open end  -->
+
+            <nav class="mobile mobile_gnb">
+                <!-- 메뉴닫기 -->
+                <div class="menu_close">
+                    <p>닫기</p>
+                </div><!-- menu_close -->
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#">menu1</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu2</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu3</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">menu4</a>
+                        <ul class="depth02">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                </ul><!-- gnb end -->
+            </nav><!-- pc end -->
+
+        </div><!-- inner end -->
+    </header>
+
+    <section class="main_visual">
+        <img src="img/6052d812-424f-437a-bfce-7f4bba12c1e6.jpg" alt="">
+    </section><!-- main_visual end -->
+</body>
+
+</html>
